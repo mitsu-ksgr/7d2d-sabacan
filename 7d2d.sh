@@ -126,7 +126,7 @@ exec_backup() {
             ;;
 
         mods )
-            if [ -z "$(ls ${PATH_7D2D_MODS_DIR})" ]; then
+            if [ -z "$(ls $PATH_7D2D_APP_MODS_DIR)" ]; then
                 echo "No mods yet."
             else
                 bk_path="$PATH_BACKUP_MODS_DIR/mods-$bk_suffix"
