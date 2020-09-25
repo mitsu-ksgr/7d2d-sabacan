@@ -161,10 +161,10 @@ main() {
     case "$cmd" in
         #----------------------------------------------------------------------
         # Systemctl
-        start       ) do_systemctl "start"      ;;
-        stop        ) do_systemctl "stop"       ;;
-        status | st ) do_systemctl "status"     ;;
-        restart     ) do_systemctl "restart"    ;;
+        start       ) exec_systemctl "start"      ;;
+        stop        ) exec_systemctl "stop"       ;;
+        status | st ) exec_systemctl "status"     ;;
+        restart     ) exec_systemctl "restart"    ;;
 
         #----------------------------------------------------------------------
         # Control Panel
