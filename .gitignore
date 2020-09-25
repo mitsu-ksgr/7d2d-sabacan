@@ -2,3 +2,5 @@
 !backups/.gitkeep
 backups/
 
+.env
+
