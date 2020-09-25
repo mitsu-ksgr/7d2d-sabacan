@@ -11,7 +11,7 @@ umask 0022
 readonly SCRIPT_NAME=$(basename $0)
 
 # Load parameters
-. .env
+. $(dirname $0)/.env
 
 
 
@@ -161,10 +161,10 @@ main() {
     case "$cmd" in
         #----------------------------------------------------------------------
         # Systemctl
-        start       ) exec_systemctl "start"      ;;
-        stop        ) exec_systemctl "stop"       ;;
-        status | st ) exec_systemctl "status"     ;;
-        restart     ) exec_systemctl "restart"    ;;
+        start       ) exec_systemctl "start"    ;;
+        stop        ) exec_systemctl "stop"     ;;
+        status | st ) exec_systemctl "status"   ;;
+        restart     ) exec_systemctl "restart"  ;;
 
         #----------------------------------------------------------------------
         # Control Panel
