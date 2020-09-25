@@ -9,9 +9,10 @@
 set -u
 umask 0022
 readonly SCRIPT_NAME=$(basename $0)
+readonly SCRIPT_DIR=$(dirname $(readlink -f $0))
 
 # Load parameters
-. $(dirname $0)/.env
+. $SCRIPT_DIR/.env
 
 
 
