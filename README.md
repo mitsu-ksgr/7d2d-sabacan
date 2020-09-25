@@ -1,14 +1,17 @@
 7d2d-sabacan
 ============
-7daystodie のサーバー管理サポートツール
+7daystodie sever management support script.
 
+### Prerequisites
+- running on GCE
+  - it's easy tosetup using https://github.com/lavinog/GCE-7days2die !
 
 ### Installation
 
 1. git clone this repos.
 
 ```sh
-$ git clone xxxxxxx
+$ git clone https://github.com/mitsu-ksgr/7d2d-sabacan.git
 $ cd 7d2d-sabacan
 ```
 
