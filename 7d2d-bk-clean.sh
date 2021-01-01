@@ -115,7 +115,7 @@ extract_date() {
 #   Commands
 #------------------------------------------------------------------------------
 clean_bk_files() {
-    local bk_path="$1"
+    local bk_path="${1%/}"
     local dline=$(date -d '3 days ago' "+%Y%m%d%H%M%S")
 
     for path in $(ls $bk_path); do
@@ -137,10 +137,10 @@ clean_bk_files() {
             continue   # skip
         fi
 
-        echo "Target: File[$type]: $file --- $dat"
 
         # remove file
-        rm $file
+        rm "$bk_path/$file"
+        echo "File[$type]: $file --- deleted."
     done
 }
 
