@@ -24,6 +24,7 @@ usage() {
     cat <<__EOS__
 Usage:
     $SCRIPT_NAME [-h] COMMAND [COMMAND_OPTION]
+    $SCRIPT_NAME clean [BACKUP_PATH]
 
 Description:
     7daystodie backup cleaner.
@@ -138,8 +139,8 @@ clean_bk_files() {
 
         echo "Target: File[$type]: $file --- $dat"
 
-        # TODO:
-        #rm $file
+        # remove file
+        rm $file
     done
 }
 
