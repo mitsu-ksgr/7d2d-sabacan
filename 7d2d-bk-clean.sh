@@ -10,6 +10,7 @@
 #------------------------------------------------------------------------------
 set -u
 umask 0022
+export LC_ALL=C
 readonly SCRIPT_NAME=$(basename $0)
 readonly SCRIPT_DIR=$(dirname $(readlink -f $0))
 
